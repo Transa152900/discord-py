@@ -12,12 +12,12 @@ async def on_ready():
 
 @bot.command()
 async def say_t(ctx, text, title):
-    emb=disnake.Embed(description=text, title=title)
+    emb=disnake.Embed(description=text, title=title, color=0x5b2076)
     await ctx.send(embed=emb)
 
 @bot.command()
 async def say(ctx, text):
-    emb=disnake.Embed(description=text)
+    emb=disnake.Embed(description=text, color=0x5b2076)
     await ctx.send(embed=emb)
 
 bot.run(os.environ["DISCORD_TOKEN"])
